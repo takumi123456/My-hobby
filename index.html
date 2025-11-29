@@ -67,4 +67,157 @@
 
     @media (max-width:640px){
       th, td { padding:8px 10px; }
-      .controls { flex-di
+      .controls { flex-direction:column; align-items:stretch; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- みーぱん画像セクション -->
+    <div class="section">
+      <h2>みーぱん</h2>
+      <div class="gray-box">
+        <ul style="list-style: none; padding: 0; margin:0;">
+          <li>
+            <img src="みーぱん.jpg"
+                 alt="佐々木美玲"
+                 width="200"
+                 style="border-radius: 8px;">
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h1>ライブ参戦歴</h1>
+    <div class="meta">ヘッダークリックで並べ替え／検索で絞り込みできます。</div>
+
+    <div class="controls">
+      <input id="q" type="search" placeholder="キーワードで検索（例：櫻坂 大阪 2025 Addiction ひな誕祭）">
+    </div>
+
+    <div class="card">
+      <table id="liveTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-key="日付">日付</th>
+            <th class="sortable" data-key="会場">会場</th>
+            <th class="sortable" data-key="アーティスト">アーティスト</th>
+            <th class="sortable" data-key="タイトル">ライブタイトル</th>
+            <th class="sortable" data-key="メモ">メモ</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- ▼▼ ここから既存の参戦歴（あなたの元コードのまま） ▼▼ -->
+
+          <!-- 2021 -->
+          <tr><td>2021-09-29</td><td>大阪</td><td>日向坂46</td><td>全国おひさま化計画</td><td>初ライブ参加</td></tr>
+          <tr><td>2021-10-29</td><td>大阪</td><td>櫻坂46</td><td>1st TOUR 2021</td><td></td></tr>
+
+          <!-- 2022 -->
+          <tr><td>2022-07-21</td><td>山梨（富士急ハイランド）</td><td>日向坂46／櫻坂46</td><td>W-KEYAKI FES.2022</td><td></td></tr>
+          <tr><td>2022-09-18</td><td>兵庫</td><td>日向坂46</td><td>Happy Smile Tour 2022</td><td></td></tr>
+          <tr><td>2022-09-29</td><td>大阪</td><td>櫻坂46</td><td>2nd TOUR 2022 “As you know?”</td><td></td></tr>
+          <tr><td>2022-10-05</td><td>広島</td><td>櫻坂46</td><td>2nd TOUR 2022 “As you know?”</td><td></td></tr>
+          <tr><td>2022-10-06</td><td>広島</td><td>櫻坂46</td><td>2nd TOUR 2022 “As you know?”</td><td></td></tr>
+          <tr><td>2022-10-18</td><td>神奈川</td><td>日向坂46</td><td>Happy Smile Tour 2022</td><td></td></tr>
+          <tr><td>2022-10-25</td><td>福岡</td><td>櫻坂46</td><td>2nd TOUR 2022 “As you know?”</td><td></td></tr>
+          <tr><td>2022-10-26</td><td>福岡</td><td>櫻坂46</td><td>2nd TOUR 2022 “As you know?”</td><td></td></tr>
+          <tr><td>2022-11-08</td><td>東京</td><td>櫻坂46</td><td>2nd TOUR 2022 “As you know?”</td><td></td></tr>
+          <tr><td>2022-11-09</td><td>東京</td><td>櫻坂46</td><td>2nd TOUR 2022 “As you know?”</td><td></td></tr>
+          <tr><td>2022-12-08</td><td>東京</td><td>櫻坂46</td><td>2nd YEAR ANNIVERSARY ～Buddies 感謝祭～</td><td></td></tr>
+
+          <!-- 2023 -->
+          <tr><td>2023-03-05</td><td>神奈川</td><td>櫻坂46</td><td>三期生「おもてなし会」</td><td></td></tr>
+          <tr><td>2023-03-23</td><td>大阪（USJ）</td><td>櫻坂46</td><td>ユニ春！ライブ</td><td></td></tr>
+          <tr><td>2023-05-31</td><td>大阪</td><td>櫻坂46</td><td>3rd TOUR 2023</td><td></td></tr>
+          <tr><td>2023-06-01</td><td>大阪</td><td>櫻坂46</td><td>3rd TOUR 2023</td><td></td></tr>
+          <tr><td>2023-08-30</td><td>大阪</td><td>日向坂46</td><td>Happy Train Tour 2023</td><td></td></tr>
+          <tr><td>2023-08-31</td><td>大阪</td><td>日向坂46</td><td>Happy Train Tour 2023</td><td></td></tr>
+          <tr><td>2023-12-10</td><td>神奈川</td><td>日向坂46</td><td>Happy Train Tour 2023</td><td></td></tr>
+
+          <!-- 2024 -->
+          <tr><td>2024-03-12</td><td>大阪</td><td>櫻坂46</td><td>4th ARENA TOUR 2024 新・櫻前線 -Go on back?-</td><td></td></tr>
+          <tr><td>2024-03-13</td><td>大阪</td><td>櫻坂46</td><td>4th ARENA TOUR 2024 新・櫻前線 -Go on back?-</td><td></td></tr>
+          <tr><td>2024-04-07</td><td>神奈川</td><td>日向坂46</td><td>5回目のひな誕祭</td><td></td></tr>
+          <tr><td>2024-05-10</td><td>千葉</td><td>櫻坂46</td><td>8th Single BACKS LIVE!!</td><td></td></tr>
+          <tr><td>2024-10-08</td><td>大阪</td><td>櫻坂46</td><td>三期生ライブ</td><td></td></tr>
+          <tr><td>2024-10-09</td><td>大阪</td><td>櫻坂46</td><td>三期生ライブ</td><td></td></tr>
+          <tr><td>2024-11-19</td><td>兵庫</td><td>日向坂46</td><td>Happy Magical Tour 2024</td><td></td></tr>
+          <tr><td>2024-11-20</td><td>兵庫</td><td>日向坂46</td><td>Happy Magical Tour 2024</td><td></td></tr>
+          <tr><td>2024-12-04</td><td>福岡</td><td>日向坂46</td><td>Happy Magical Tour 2024</td><td></td></tr>
+          <tr><td>2024-12-05</td><td>福岡</td><td>日向坂46</td><td>Happy Magical Tour 2024</td><td></td></tr>
+          <tr><td>2024-12-10</td><td>愛知</td><td>日向坂46</td><td>Happy Magical Tour 2024</td><td></td></tr>
+          <tr><td>2024-12-11</td><td>愛知</td><td>日向坂46</td><td>Happy Magical Tour 2024</td><td></td></tr>
+
+          <!-- 2025 -->
+          <tr><td>2025-01-25</td><td>千葉</td><td>日向坂46</td><td>東村芽依 卒業セレモニー</td><td></td></tr>
+          <tr><td>2025-04-05</td><td>神奈川</td><td>日向坂46</td><td>6回目のひな誕祭(佐々木美玲卒業セレモニー）</td><td></td></tr>
+          <tr><td>2025-04-06</td><td>神奈川</td><td>日向坂46</td><td>6回目のひな誕祭</td><td></td></tr>
+
+          <!-- ▼▼ ここから今回追加した4公演 ▼▼ -->
+          <tr><td>2025-08-23</td><td>大阪（京セラドーム大阪）</td><td>櫻坂46</td><td>5th TOUR 2025 “Addiction”</td><td></td></tr>
+          <tr><td>2025-08-24</td><td>大阪（京セラドーム大阪）</td><td>櫻坂46</td><td>5th TOUR 2025 “Addiction”</td><td>ツアーファイナル</td></tr>
+
+          <tr><td>2025-10-22</td><td>大阪</td><td>日向坂46</td><td>MONSTER 2025</td><td></td></tr>
+          <tr><td>2025-10-23</td><td>大阪</td><td>日向坂46</td><td>MONSTER 2025</td><td></td></tr>
+
+          <!-- ▲▲ 追加分ここまで ▲▲ -->
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // 検索
+    const q = document.getElementById('q');
+    const table = document.getElementById('liveTable');
+    const tbody = table.querySelector('tbody');
+
+    q.addEventListener('input', () => {
+      const kw = q.value.trim().toLowerCase();
+      for (const tr of tbody.rows) {
+        const joined = Array.from(tr.cells)
+          .map(td => td.textContent.toLowerCase())
+          .join(' ');
+        tr.style.display = joined.includes(kw) ? '' : 'none';
+      }
+    });
+
+    // 並べ替え
+    const getCellValue = (tr, idx) => tr.children[idx].textContent;
+    let sortState = { index: 0, asc: true };
+
+    table.querySelectorAll('th.sortable').forEach((th, index) => {
+      th.addEventListener('click', () => {
+        const rows = Array.from(tbody.querySelectorAll('tr'))
+          .filter(r => r.style.display !== 'none');
+        const isDate = th.dataset.key === '日付';
+        const asc = sortState.index === index ? !sortState.asc : true;
+
+        rows.sort((a, b) => {
+          let A = getCellValue(a, index);
+          let B = getCellValue(b, index);
+          if (isDate) {
+            A = new Date(A);
+            B = new Date(B);
+            return asc ? A - B : B - A;
+          } else {
+            return asc
+              ? A.localeCompare(B, 'ja')
+              : B.localeCompare(A, 'ja');
+          }
+        });
+
+        rows.forEach(r => tbody.appendChild(r));
+        sortState = { index, asc };
+      });
+    });
+  </script>
+
+</body>
+</html>
